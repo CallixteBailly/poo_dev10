@@ -24,7 +24,8 @@
 //    $book->save();
 
 	$book = EntityFactory::get('bd');
-	$book->setTItle("RUBRIQUE-A-BRAC. 1");
+	$book->setTitle("RUBRIQUE-A-BRAC. 1");
+	$book->setIllustrator("Alexis");
 	$book->save();
 	Kint::dump($book);
 

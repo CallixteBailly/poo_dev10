@@ -4,7 +4,7 @@ use Aston\Manager\BookEntityManager;
 /**
  * Class Book Contains information Book Title author description.
  */
-class BookEntity
+class BookEntity implements EntityInterface
 {
     private $id;
     private $title;
@@ -43,7 +43,7 @@ class BookEntity
     {
 
     }
-    public static function create()
+    public function create()
     {
 
     }
