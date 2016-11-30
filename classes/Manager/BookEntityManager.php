@@ -1,8 +1,10 @@
 <?php
-namespace Manager;
+namespace Aston\Manager;
 /**
  * Class
  */
+
+use Aston\Entity\BookEntity;
 class BookEntityManager
 {
     private $db;
@@ -12,7 +14,7 @@ class BookEntityManager
         $this-> db = $db;
     }
 
-    public function addBook(\Entity\BookEntity $book)
+    public function addBook(BookEntity $book)
     {
         $query = $this->db->prepare('INSERT INTO book (title,author,body) VALUES (:title,:author,:body)');
         $query->bindValue(':title', $book->getTitle());

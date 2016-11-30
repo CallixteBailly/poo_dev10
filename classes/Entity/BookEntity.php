@@ -1,5 +1,6 @@
 <?php
-namespace Entity;
+namespace Aston\Entity;
+use Aston\Manager\BookEntityManager;
 /**
  * Class Book Contains information Book Title author description.
  */
@@ -11,7 +12,7 @@ class BookEntity
     private $description;
 
     protected $manager;
-    public function __construct(\Manager\BookEntityManager $manager)
+    public function __construct(BookEntityManager $manager)
     {
         $this->manager = $manager;
     }

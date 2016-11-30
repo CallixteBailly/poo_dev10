@@ -14,5 +14,13 @@
             "name": "Aston Ecole",
             "email": "aston@example.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "Aston\\Entity\\": "classes/Entity/",
+            "Aston\\Factory\\": "classes/Factory/",
+            "Aston\\Core\\": "classes/Core/",
+            "Aston\\Manager\\": "classes/Manager/"
+        }
+    }
 }

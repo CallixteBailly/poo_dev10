@@ -1,5 +1,5 @@
 <?php
-namespace Core;
+namespace Aston\Core;
 /**
  * Singleton soon.
  */

@@ -1,16 +1,18 @@
 <?php
-	//require 'vendor/autoload.php';
-	//require 'classes/EntityFactory.php';
+	require 'vendor/autoload.php';
 
-	function __autoload($class)
-	{
-		$class = 'classes/' . str_replace('\\', '/', $class) .'.php';
-		var_dump($class);
-		if (file_exists($class))
-		{
-            require $class;
+	use Aston\Factory\EntityFactory;
+
+
+/*	function my_autoloader($class) {
+        $class = 'classes/' . str_replace('\\', '/', $class) .'.php';
+        if(file_exists($class)){
+            include $class;
 		}
+
 	}
+
+	spl_autoload_register('my_autoloader');*/
 
 //	$db = Database::getConnection('PDO');
 //	$manager = new BookEntityManager($db);
@@ -21,10 +23,10 @@
 //	//print $book->getTitle();
 //    $book->save();
 
-	$book = \Factory\EntityFactory::get('book');
+	$book = EntityFactory::get('bd');
 	$book->setTItle("RUBRIQUE-A-BRAC. 1");
 	$book->save();
-	//Kint::dump($book);
+	Kint::dump($book);
 
 //	$user = EntityFactory::get('user');
 //  $author = new authorEntity($manager);
